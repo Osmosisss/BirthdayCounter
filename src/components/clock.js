@@ -26,14 +26,19 @@ class Clock extends Component {
 
         if (birthMonth > currentMonth) {
             bday.setFullYear(today.getFullYear());
-        } else if (birthMonth < currentMonth) {
+        }
+        else if (birthMonth < currentMonth) {
             bday.setFullYear(today.getFullYear() + 1);
-        } else if (birthMonth == currentMonth) {
+        }
+        else if (birthMonth == currentMonth) {
+
             const birthDay = bday.getDate();
-            if (birthMonth > currentMonth) {
+            const currentDay = today.getDate();
+
+        if (birthDay > currentDay) {
                 bday.setFullYear(today.getFullYear());
             }
-            else if (birthMonth < currentMonth) {
+        else if (birthDay < currentDay) {
                 bday.setFullYear(today.getFullYear() + 1);
             }
         }
@@ -70,6 +75,10 @@ class Clock extends Component {
                 this.setState({ timeRemaining: timeRemaining})
             }, 1000);
         }
+
+    componentWillUnmount() {
+        clearInterval(this.timer)
+    }
 
     render() {
         const data = this.state.timeRemaining
