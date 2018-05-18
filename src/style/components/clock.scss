@@ -32,21 +32,21 @@
     font-weight: 100;
 }
 
-.message_container {
+.message-container {
     @include clock-dimensions;
     @include center-item($pull-y: 0%);
     margin-top: 20px;
 }
 
-.message_container_title {
+.message-container-title {
     @include center-item($pull-x: 0%, $pull-y: 0%, $top: 5%, $left: 10%);
     font-family: var(--roboto-condensed);
     color: var(--yellow-secondary);
     font-size: 22px;
 }
 
-.message_container_message {
-    @include center-item($pull-x: 0%, $pull-y: 0%, $top: 10%, $left: 10%);
+.message-container-message {
+    @include center-item($pull-x: 0%, $pull-y: 0%, $top: 15%, $left: 10%);
     font-family: var(--roboto-condensed);
     font-size: 90px;
     font-weight: bold;

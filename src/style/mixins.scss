@@ -5,7 +5,7 @@
 
 @mixin center-item($pull-x: -50%, $pull-y: -50%, $top: 50%, $left: 50%) {
     position: absolute;
+    transform: translate($pull-x, $pull-y);
     top: $top;
     left: $left;
-    transform: translate($pull-x, $pull-y);
 }
